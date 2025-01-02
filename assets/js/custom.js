@@ -155,6 +155,7 @@
 		$(".menu-trigger").on('click', function() {	
 			$(this).toggleClass('active');
 			$('.header-area .nav').slideToggle(200);
+			$('.logo').addClass('top-top-align-title');
 		});
 	}
 
@@ -169,6 +170,7 @@
 				if(width < 991) {
 					$('.menu-trigger').removeClass('active');
 					$('.header-area .nav').slideUp(200);	
+					$('.logo').removeClass('top-top-align-title');
 				}				
 				$('html,body').animate({
 					scrollTop: (target.offset().top) - 80

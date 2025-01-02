@@ -271,7 +271,7 @@ header
 }
 
 .header-area {
-  background-color: rgba(250,250,250,0.15);
+  background-color: rgba(250,250,250,0.35);
   position: absolute;
   top: 40px;
   left: 0;
@@ -566,6 +566,8 @@ header
   color: #f5a425;
 }
 
+
+
 @media (max-width: 1200px) {
   .header-area .main-nav .nav li {
     padding-left: 7px;
@@ -699,6 +701,40 @@ header
 
   .header-area.header-sticky {
     height: 72px;
+  }
+
+  .footer p{
+    font-size: 12px !important;
+  }
+}
+
+@media (max-width: 444px) {
+  .header-area .main-nav .logo{
+    margin-left: 5px;
+    line-height: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: left;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .header-area .main-nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 90%;
+  }
+
+  .top-top-align-title{
+    width: 83%;
+    top: 19px;
+    position: absolute;
+  }
+
+  .footer p{
+    font-size: 10px !important;
   }
 }
 
@@ -1892,3 +1928,4 @@ responsive
   }
 
 }
+
