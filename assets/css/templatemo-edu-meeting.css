@@ -291,7 +291,7 @@ header
 .header-area .main-nav .logo {
   line-height: 100px;
   color: #FDFFF3  ;
-  font-size: 28px;
+  font-size: 20px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -301,6 +301,12 @@ header
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
+
+.header-area .main-nav .logo img {
+  height: 55px;
+  width: 55px;
+}
+
 
 .background-header .main-nav .logo {
   line-height: 75px;
@@ -674,6 +680,28 @@ header
     display: flex !important;
   }
 }
+
+@media (max-width: 560px) {
+  .header-area .main-nav .logo{
+    font-size: 15px;
+    line-height: 70px;
+  }
+
+  .header-area .main-nav .logo img {
+    height: 40px;
+    width: 40px;
+  }
+
+  .header-area .main-nav .menu-trigger{
+    top: 21px;
+    right: 21px;
+  }
+
+  .header-area.header-sticky {
+    height: 72px;
+  }
+}
+
 
 
 /* 
@@ -1125,6 +1153,16 @@ section.our-courses {
   background-size: cover;
   padding-top: 230px;
   padding-bottom: 130px;
+}
+
+@media (max-width: 990px) {
+  .food-items{
+    padding-top: 900px !important;
+  }
+
+  .company-data{
+    gap: 20px;
+  }
 }
 
 .our-courses .item .down-content {
