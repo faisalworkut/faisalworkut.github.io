@@ -8,7 +8,8 @@
     <meta name="description" content="">
     <meta name="author" content="TemplateMo">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="icon" type="image/png" href="assets/images/dg-logo-red.png">
     <title>Dignity Fresh Food Trading</title>
 
     <!-- Bootstrap core CSS -->
@@ -123,7 +124,7 @@ https://templatemo.com/tm-569-edu-meeting
                   <img src="assets/images/values-icon.png" alt="">
                 </div>
                 <div class="down-content">
-                  <h4>OUR VALUES</h4>
+                  <h4>VALUES</h4>
                   <p>Organizational Commitment, Accountability, Initiative, Customers are our core values and definitions.</p>
                 </div>
               </div>
@@ -134,7 +135,7 @@ https://templatemo.com/tm-569-edu-meeting
                   <img src="assets/images/mission-icon.png" alt="">
                 </div>
                 <div class="down-content">
-                  <h4>OUR MISSION</h4>
+                  <h4>MISSION</h4>
                   <p>Our mission is to deliver top-quality food products and exceed customer expectations for an unforgettable experience</p>
                 </div>
               </div>
@@ -145,7 +146,7 @@ https://templatemo.com/tm-569-edu-meeting
                   <img src="assets/images/vision-icon.png" alt="">
                 </div>
                 <div class="down-content">
-                  <h4>OUR VISION</h4>
+                  <h4>VISION</h4>
                   <p>Our Vision is to become a leading trading and distribution business in UAE, offering high-quality consumer products and value-added services.</p>
                 </div>
               </div>
@@ -298,7 +299,7 @@ https://templatemo.com/tm-569-edu-meeting
   <section class="contact-us" id="contact">
     <div class="container">
       <div class="row">
-        <div class="col-lg-9 align-self-center">
+        <div class="col-lg-6 align-self-center">
           <div class="row">
             <div class="col-lg-12">
               <form id="contact" action="mailto:dignityfreshtrading.com" method="get" enctype="text/plain">
@@ -306,17 +307,17 @@ https://templatemo.com/tm-569-edu-meeting
                   <div class="col-lg-12">
                     <h2>Let's get in touch</h2>
                   </div>
-                  <div class="col-lg-4">
+                  <div class="col-lg-6">
                     <fieldset>
                       <input name="name" type="text" id="userName" placeholder="YOURNAME...*" required="">
                     </fieldset>
                   </div>
-                  <div class="col-lg-4">
+                  <div class="col-lg-6">
                     <fieldset>
                     <input name="email" type="text" id="userEmail" pattern="[^ @]*@[^ @]*" placeholder="YOUR EMAIL..." required="">
                   </fieldset>
                   </div>
-                  <div class="col-lg-4">
+                  <div class="col-lg-12">
                     <fieldset>
                       <input name="subject" type="text" id="subject" placeholder="SUBJECT...*" required="">
                     </fieldset>
@@ -336,23 +337,26 @@ https://templatemo.com/tm-569-edu-meeting
             </div>
           </div>
         </div>
-        <div class="col-lg-3">
-          <div class="right-info">
-            <ul>
-              <li>
-                <h6>Phone Number</h6>
-                <span>+971557723887</span>
-              </li>
-              <li>
-                <h6>Email Address</h6>
-                <span>dignityfreshtrading.com</span>
-              </li>
-              <li>
-                <h6>Street Address</h6>
-                <span>HAMDAN STREET - ABU DHABI</span>
-              </li>
-            </ul>
-          </div>
+        <div class="col-lg-6">
+            <div class="right-info">
+              <div class="ul row">
+                <div  class="li col-lg-5">
+                  <h6>Phone Number</h6>
+                  <span>+971557723887</span>
+                </div>
+                <div  class="li col-lg-5">
+                  <h6>Email Address</h6>
+                  <span>dignityfreshtrading.com</span>
+                </div>
+                <div class="li col-lg-12">
+                  <h6>Street Address</h6>
+                  <span>HAMDAN STREET - ABU DHABI</span>
+                </div>
+                <div class="li col-lg-12">
+                  <div id="map"></div>
+                </div>
+              </div>
+            </div>
         </div>
       </div>
     </div>
@@ -361,6 +365,45 @@ https://templatemo.com/tm-569-edu-meeting
           </p>
     </div>
   </section>
+
+  <a
+        href="https://wa.me/+971557723887?text=Hi%2C%20I%20would%20like%20to%20inquiry%20about%20Dignity%20Fresh%20Food%20Trading"
+        class="whatsapp-button"
+        target="_blank"
+    >
+        <img
+            src="assets/images/whatsApp.svg"
+            alt="WhatsApp"
+        />
+    </a>
+
+
+  <!-- Map Container -->
+  
+
+  <!-- Leaflet.js Library -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+      // Coordinates of the target location (replace with your desired coordinates)
+      const targetLocation = [24.485384, 54.360546]; // Example: New York City
+
+      // Initialize the map centered at the target location
+      const map = L.map('map').setView(targetLocation, 13);
+
+      // Add OpenStreetMap tiles to the map
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map);
+
+      // Add a marker at the target location
+      const marker = L.marker(targetLocation).addTo(map);
+      marker.bindPopup("<b>Dignity Fresh Food Trading</b>").openPopup();
+
+      // Add a zoom control for navigation
+      L.control.zoom({
+          position: 'topright'
+      }).addTo(map);
+  </script>
 
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->
