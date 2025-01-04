@@ -91,11 +91,11 @@ html, body {
 
 a {
   text-decoration: none !important;
-  color: #3CF;
+  color: #FDFFF3;
 }
 
 a:hover {
-	color: #FC3;
+	color: #3CF;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -796,9 +796,9 @@ banner
 .main-banner .caption h2 {
   margin-top: 20px;
   margin-bottom: 20px;
-  font-size: 36px;
+  font-size: 60px;
   text-transform: uppercase;
-  font-weight: 800;
+  font-weight: 600;
   color: #FDFFF3  ;
   letter-spacing: 1px;
 }
@@ -833,7 +833,7 @@ banner
   }
 
   .main-banner .caption h2 {
-    font-size: 36px;
+    font-size: 56px;
   }
 
 }
@@ -1549,7 +1549,14 @@ section.contact-us .right-info .ul .li span {
   font-size: 15px;
   color: #FDFFF3  ;
   font-weight: 600;
+  width: fit-content;
 }
+
+section.contact-us .right-info .ul .li .location:hover {
+  color: #d9d9d9;
+  cursor: pointer;
+}
+
 
 .footer {
   text-align: center;
@@ -1891,7 +1898,7 @@ responsive
   .main-banner .caption h2 {
     margin-top: 10px;
     margin-bottom: 10px;
-    font-size: 22px;
+    font-size: 30px;
   }
 
   .main-banner .caption .main-button-red {
@@ -1951,12 +1958,12 @@ responsive
 }
 
 #map {
-  height: 290px;
+  height: 245px;
   width: 100%;
   margin: 0;
   padding: 0;
   border-radius: 20px;
-  margin-top: 30px;
+  margin-top: 15px;
 }
 
 .whatsapp-button {
@@ -1997,4 +2004,8 @@ responsive
 
 .leaflet-control-zoom-out span{
   color:black !important;
+}
+
+.leaflet-touch .leaflet-bar a{
+  text-align: -webkit-center;
 }
